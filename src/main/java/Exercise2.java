@@ -2,9 +2,9 @@ import java.util.Scanner;
 
 /**
  * @author valery
- * @see Base
+ * @see Exercise2
  */
-public class Base {
+public class Exercise2 {
     //Другие JavaDoc в данном задании не использовал (разновидности @see, @param, @return)
     public static void main(String[] args) {
         //Определяем переменные и экземпляр класса
