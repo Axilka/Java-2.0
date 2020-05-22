@@ -45,13 +45,13 @@ public class Exercise3 {
     }
 
     public static void maxMass() {
-        int i = 0, size;
+        int i , size;
         Scanner in = new Scanner(System.in);
         System.out.print("Задайте размер одномерного массива: ");
         size = in.nextInt();
 
         Scanner insert = new Scanner(System.in);
-        String massSting[] = new String[size];
+        String[] massSting = new String[size];
         for (i = 0; i < size; i++) {
             System.out.print("Введите слово в ячейку " + i + ": ");
             massSting[i] = insert.nextLine();
