@@ -4,6 +4,9 @@ public class Gift {
     public static void mass() {
         int maxMinus = 0;
         int minPlus = 10;
+        int numberPlus = 0;
+        int numberMinus = 0;
+        int save;
 
         int n = 20;
         int[] massInt = new int[n];
@@ -11,21 +14,32 @@ public class Gift {
         for (int i = 0; i < massInt.length; i++)
             massInt[i] = (int) (Math.random() * 20) - 10;
 
-        for (int value : massInt) {
-            if ((value < minPlus) && (value > 0)) {
-                minPlus = value;
+        for (int i = 0; i < massInt.length; i++) {
+            if ((massInt[i] < minPlus) && (massInt[i] > 0)) {
+                minPlus = massInt[i];
+                numberPlus = i;
             }
 
-            if (value < maxMinus) {
-                maxMinus = value;
+            if (massInt[i] < maxMinus) {
+                maxMinus = massInt[i];
+                numberMinus = i;
             }
         }
 
         for (int i : massInt)
             System.out.print(i + " ");
 
+        save = massInt[numberPlus];
+        massInt[numberPlus] = massInt[numberMinus];
+        massInt[numberMinus] = save;
+
         System.out.println("\nМаксимальное отрицательное: " + maxMinus);
-        System.out.print("Минимальное положительное: " + minPlus + "\n");
+        System.out.println("Минимальное положительное: " + minPlus);
+
+        System.out.println("Поменяные местами элементы массива: " + numberPlus + " и " + numberMinus);
+
+        for (int i : massInt)
+            System.out.print(i + " ");
     }
 
     public static void main(String[] args) {
@@ -43,7 +57,7 @@ public class Gift {
         chocolate1.setWeight(513.4);
         Staff[] gift = {candy1, jellybean1, brownie1, chocolate1};
 
-        System.out.println("\nПодарок состоит из: ");
+        System.out.println("\n\nПодарок состоит из: ");
         for (Staff someStaff : gift) {
             System.out.println(someStaff.toString());
         }
