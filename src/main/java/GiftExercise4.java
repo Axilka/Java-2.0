@@ -1,6 +1,6 @@
 import staff.*;
 
-public class Gift {
+public class GiftExercise4 {
     public static void mass() {
         int maxMinus = 0;
         int minPlus = 10;
