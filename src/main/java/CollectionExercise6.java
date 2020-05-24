@@ -7,7 +7,7 @@ public class CollectionExercise6 {
         String line;
         Scanner in = new Scanner(System.in);
         System.out.println("Введите путь к файлу в формате D:/имя.txt: ");
-        String way = "D:/qwert.txt"; //in.nextLine();
+        String way = in.nextLine();
         int maxFreq = 0;
         String wordMaxValue = "";
 
