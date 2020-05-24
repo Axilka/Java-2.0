@@ -45,7 +45,7 @@ public class Exercise3 {
     }
 
     public static void maxMass() {
-        int i , size;
+        int i, size;
         Scanner in = new Scanner(System.in);
         System.out.print("Задайте размер одномерного массива: ");
         size = in.nextInt();
