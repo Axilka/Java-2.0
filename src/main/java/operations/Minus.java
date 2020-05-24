@@ -1,7 +1,7 @@
 package operations;
 
 public class Minus {
-    private Double minusValue;
+    private double minusValue;
 
     public Minus() {
     }
@@ -14,7 +14,7 @@ public class Minus {
         return minusValue;
     }
 
-    public void setMinusValue(Double minusValue) {
+    public void setMinusValue(double minusValue) {
         this.minusValue = minusValue;
     }
 

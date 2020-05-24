@@ -1,7 +1,8 @@
 package operations;
 
 public class Divide {
-    private Double divideValue;
+    private double divideValue;
+    private double save = 0;
 
     public Divide() {
     }
@@ -14,15 +15,17 @@ public class Divide {
         return divideValue;
     }
 
-    public void setDivideValue(Double divideValue) {
+    public Double getSave() {
+        return save;
+    }
+
+    public void setDivideValue(double divideValue) {
         this.divideValue = divideValue;
     }
 
     public double divideValue(double equals) {
         //Переменная save будет сохранять значение, чтобы можно было продолжить делить, если до этого было деление на 0
         //чтобы не сбрасывался результат прошлой цепочки вычислений
-        double save = 0;
-
         try {
             save = equals;
             equals = equals / divideValue;
@@ -37,6 +40,6 @@ public class Divide {
         if (divideValue == 0) {
             return save;
         } else
-        return equals;
+            return equals;
     }
 }

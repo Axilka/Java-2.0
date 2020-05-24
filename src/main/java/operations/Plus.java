@@ -1,7 +1,7 @@
 package operations;
 
 public class Plus {
-    private Double plusValue;
+    private double plusValue;
 
     public Plus() {
     }
