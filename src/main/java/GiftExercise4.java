@@ -2,7 +2,7 @@ import staff.*;
 
 public class GiftExercise4 {
     public static void mass() {
-        int maxMinus = 0;
+        int maxMinus = -10;
         int minPlus = 10;
         int numberPlus = 0;
         int numberMinus = 0;
@@ -20,7 +20,7 @@ public class GiftExercise4 {
                 numberPlus = i;
             }
 
-            if (massInt[i] < maxMinus) {
+            if ((massInt[i] > maxMinus) && (massInt[i] < 0)) {
                 maxMinus = massInt[i];
                 numberMinus = i;
             }
