@@ -39,6 +39,10 @@ public class CollectionExercise6 {
                         wordMaxValue = arrayList.get(j);
                     }
 
+                    if ((freq == maxFreq) && (!arrayList.get(j).equals(wordMaxValue))) {
+                        wordMaxValue += " и " + arrayList.get(j);
+                    }
+
                     for (int p = j + 1; p < arrayList.size(); p++) {
                         if (arrayList.get(j).equals(arrayList.get(p))) {
                             j++;
@@ -47,7 +51,7 @@ public class CollectionExercise6 {
                 }
 
                 //Найти слово с максимальным количеством повторений. Вывести на консоль это слово и сколько раз оно встречается в файле
-                System.out.println("\nНайти слово с максимальным количеством повторений. Вывести на консоль это слово и сколько раз оно встречается в файле: \n" + wordMaxValue + " с частотой - " + maxFreq);
+                System.out.println("\nНайти слово/ва с максимальным количеством повторений. Вывести на консоль это слово/ва и сколько раз оно/они встречается в файле: \nСлово/ва: " + wordMaxValue + " с частотой - " + maxFreq);
             }
         } catch (IOException exc) {
             System.out.println("Ошибка ввода-вывод: " + exc);
