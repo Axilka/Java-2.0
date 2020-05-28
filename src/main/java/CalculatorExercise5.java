@@ -36,7 +36,11 @@ public class CalculatorExercise5 {
 
             if (i.equals("/")) {
                 divide.setDivideValue(in.nextDouble());
-                equals = divide.divideValue(equals);
+                try {
+                    equals = divide.divideValue(equals);
+                } catch (ArithmeticException e) {
+                    System.out.println(e.getMessage());
+                }
             }
 
             if (i.equals("*")) {
