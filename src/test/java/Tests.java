@@ -21,13 +21,6 @@ public class Tests {
         divide.divideValue(5);
     }
 
-    @Test
-    public void dividerCheckNullFromMainInsertEquals() {
-        Divide divide = new Divide();
-        divide.setDivideValue(0);
-        Assert.assertEquals(divide.divideValue(5), 5, 0);
-    }
-
     //Проверка методов вычитания
     @Test
     public void minusCheckFromMainInsertEquals() {
